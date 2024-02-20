@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login Page</title>
+<link rel="stylesheet" th:href="@{/css/loginStyle.css}">
+</head>
+<body>
+<header>
+<nav class="navbar">
+<img src="images/tunehublogo.png" class="brand-logo" alt="logo" />
+    <div class="right-container">
+        <a href="registration" class="login-link">Register</a>
+        <a href="about" class="login-link">About</a>
+    </div>
+</nav>
+</header>
+	<script th:if="${loginError}">
+    alert("Incorrect username or password. Please try again.");
+</script>
+	<div id="main">
+		<div id="formcontainer">
+			<h1>USER LOGIN</h1>
+			<form action="validate" method="POST">
+				<label>Email Id: </label> <input type="email" class="formdetails" name="email" required /><br>
+
+				<label>Password:</label> <input type="password" class="formdetails" name="password"
+					required /><br> <input type="submit" value="LOGIN" id="login" />
+			</form>
+		</div>
+	</div>
+</body>
+</html>

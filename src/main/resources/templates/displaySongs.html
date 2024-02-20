@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Display Songs</title>
+<link rel="stylesheet" th:href="@{/css/displaySongsStyle.css}">
+</head>
+<body>
+<header>
+<nav class="navbar">
+<img src="images/tunehublogo.png" class="brand-logo" alt="logo" />
+    <div class="right-container">
+        <a href="/" class="login-link">Home</a>
+        <a href="logout" class="login-link">logout</a>
+    </div>
+</nav>
+</header>
+<div class="tablecontainer">
+<table border>
+<thead>
+<tr>
+<th>Name</th>
+<th>Artists</th>
+<th>Genre</th>
+<th>Play</th>
+</tr>
+</thead>
+<tbody>
+<!-- for displaying the dynamic data we are making use of thymeleaf -->
+
+<tr th:each="song:${songs}">
+<td th:text="${song.name}"></td>
+<td th:text="${song.artist}"></td>
+<td th:text="${song.genre}"></td>
+<!-- If we use utext instead of text then the iframe code will not be visible -->
+
+<td>
+<audio controls>
+<source th:src="${song.link}" type="audio/mpeg">
+</audio>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

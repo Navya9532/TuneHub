@@ -1,0 +1,146 @@
+/*
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply a basic font and background color
+body {
+  font-family: 'sans-serif','Arial';
+  background-image: url('/images/bgimgtunehub.jpg');
+  background-size: cover; 
+  background-position: center; 
+}*/
+
+/* Style the container 
+div {
+  max-width: 700px;
+  margin: 100px auto;
+  padding: 10px;
+  background-color: black;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  justify-content:center;
+  color:white;
+}*/
+
+/* Style links
+a {
+  display: block;
+  margin-bottom: 20px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: #007bff;
+  background-color: #fff;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+a:hover {
+  background-color: rgb(128, 128, 255);
+  color: #fff;
+}
+
+#addPlaylist{
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 10px auto;
+}
+
+#addPlaylist:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+#songcontainer{
+	text-align: right;
+  justify-content:center;
+  display:flex;
+  width: 80%;
+  padding: 20px;
+    margin: 10px 5px;
+    text-align: right;
+}*/
+
+/* customerHomeStyle.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+.nav-links {
+    list-style: none;
+}
+.nav-links li {
+    display: inline;
+    margin-right: 20px;
+}
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+.main {
+    padding: 20px;
+    background-size: cover;
+}
+.login-link {
+    display: inline-block;
+    background-color:#007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 9px;
+    text-decoration: none;
+}
+.login-link:hover {
+    background-color:  rgb(128, 128, 255);
+}
+.navbar {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 4%;
+  background: #0c111b;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+}
+.brand-logo {
+  height: 70px;
+}
+.right-container {
+  display: block;
+  margin-left: auto;
+}
+body {
+  font-family: 'sans-serif','Arial';
+  background-image: url('/images/custbgimg.jpg');
+  background-size: cover; 
+  background-position: center; 
+}
+
+.main {
+  max-width: 700px;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: black;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  justify-content:center;
+  color:white;
+}

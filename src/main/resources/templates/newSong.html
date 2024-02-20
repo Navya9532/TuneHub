@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add New Song</title>
+<link rel="stylesheet" th:href="@{/css/newSongStyle.css}">
+</head>
+<body>
+<header>
+<nav class="navbar">
+<img src="images/tunehublogo.png" class="brand-logo" alt="logo" />
+    <div class="right-container">
+        <a href="/" class="login-link">Home</a>
+        <a href="adminHome" class="login-link">Admin Home</a>
+        <a href="logout" class="login-link">logout</a>
+    </div>
+</nav>
+</header>
+<div id="main">
+<form action="addSong" method="post">
+<label>Song Name: </label>
+<input type="text" name="name">
+<br>
+
+<label>Song Artist: </label>
+<input type="text" name="artist">
+<br>
+
+<label>Song Genre: </label>
+<input type="text" name="genre">
+<br>
+
+<label>Song Link: </label>
+<input type="text" name="link">
+<br>
+
+<input type="submit" id="addsong" value="ADD SONG">
+</form>
+</div>
+</body>
+</html>

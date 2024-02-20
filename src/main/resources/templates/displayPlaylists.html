@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Display playlists</title>
+<link rel="stylesheet" th:href="@{/css/displayPlaylistStyle.css}">
+</head>
+<body>
+<header>
+<nav class="navbar">
+<img src="images/tunehublogo.png" class="brand-logo" alt="logo" />
+    <div class="right-container">
+        <a href="/" class="login-link">Home</a>
+        <a href="logout" class="login-link">logout</a>
+    </div>
+</nav>
+</header>
+<div id="main">
+	<table border>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Songs</th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- for displaying the dynamic data we are making use of thymeleaf -->
+
+			<tr th:each="plist:${allplaylist}">
+				<td th:text="${plist.name}"></td>
+				<td>
+				<ul>
+					<li th:each="song:${plist.songs}">
+					<span th:text="${song.name}"></span>
+						<audio controls>
+							<source th:src="${song.link}" type="audio/mpeg">
+						</audio>
+				   </ul>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+</body>
+</html>

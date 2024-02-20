@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Create playlist</title>
+<link rel="stylesheet" th:href="@{/css/createPlaylistStyle.css}">
+</head>
+<body>
+<header>
+<nav class="navbar">
+<img src="images/tunehublogo.png" class="brand-logo" alt="logo" />
+    <div class="right-container">
+        <a href="/" class="login-link">Home</a>
+        <a href="logout" class="login-link">logout</a>
+    </div>
+</nav>
+</header>
+<div id="main">
+<form action="addPlaylist" method="POST">
+<h1>Create Playlist</h1>
+<label>PlayList name:</label>
+<input type="text" name="name">
+<br>
+<div id="songcontainer" th:each="song:${songs}">
+<!-- The name of the input type should be the same as the attribute of playlist entity -->
+<input type="checkbox" th:name="songs" th:value="${song.id}">
+<label th:text="${song.name}"></label>
+</div>
+<input type="submit" value="ADD PLAYLIST" id="addPlaylist"/>
+</form>
+</div>
+</body>
+</html>
